@@ -1,8 +1,9 @@
+html{
+    scroll-behavior: smooth;
+}
 header {
-    width: 100vw;
     background: #406AFF;
     height: 137px;
-    padding: 1vh 2.9vw;
     text-align: center;
 }
 header a {
@@ -16,13 +17,9 @@ header a {
 header a:hover {
     color: #FF5733; /* Новый цвет текста при наведении */
 }
-header nav {
-    margin-bottom: 200px;
-}
 body{
     margin: 0;
 }
-
 .overlay {
     display: none;
     position: fixed;
@@ -87,25 +84,212 @@ body{
     background-color: #B5FF3B;
 }
 .div1{
-    position: absolute;
-    left: 745px;
-    top: 137px;
     font-family: 'Inter';
     font-size: 45px;
     color: #2C65D5;
 }
 #article > img{
-    position: absolute;
     width: 339px;
-    height: 374px;
-    left: 100px;
-    top: 400px;
-    mix-blend-mode: normal;
 
 }
 #article1{
+    display: flex;
     align-items: center;
-    position: absolute;
-    left: 600px;
-    top:1000px;
+    gap: 60px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#article{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#article1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем по горизонтали */
+    
+    padding: 0 20px; /* Убираем отступы справа и слева */
+    max-width: 1000px; /* Добавляем максимальную ширину для контейнера */
+    margin: auto; /* Центрируем контейнер по горизонтали */
+}
+
+.GM1 {
+    font-size: 20px; /* Делаем дочерние элементы (div) блоками шириной 100% */
+    text-align: right;
+    color: #2C65D5; /* Выравниваем текст внутри дочерних элементов по центру */
+}
+.GM2 {
+    font-size: 20px; /* Делаем дочерние элементы (div) блоками шириной 100% */
+    text-align: left;
+    color: #2C65D5; /* Выравниваем текст внутри дочерних элементов по центру */
+}
+#article1 h2 {
+    text-align: center;
+    color: #2C65D5;
+    font-size: 30px; /* Выравниваем заголовок по центру */
+}
+#article2 pre{
+    color: red;
+}
+#article2 > p{
+    color: #2C65D5;
+}
+#article2 > h2{
+    display: flex;
+    font-size: 30px;
+    color: #2C65D5;
+    text-align: center;
+}
+#article2{
+    font-size: 35px;
+}
+footer{
+    background: #406AFF;
+    height: 137px;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: #B5FF3B;
+    margin: 55px;
+    font-size: 60px;
+    justify-content:center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+footer a:hover {
+    color: #FF5733; /* Новый цвет текста при наведении */
+}
+/* Стили для мобильных устройств */
+@media only screen and (max-width: 360px) {
+    header {
+        height: 100px; /* Уменьшаем высоту хедера для мобильных устройств */
+    }
+    header a {
+        margin: 30px; /* Уменьшаем отступы ссылок для мобильных устройств */
+        font-size: 40px; /* Уменьшаем размер ссылок для мобильных устройств */
+    }
+}
+
+/* Стили для футера */
+footer {
+    background: #406AFF;
+    height: 137px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #B5FF3B;
+    margin: 55px;
+    font-size: 60px;
+    justify-content:center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+/* Стили для мобильных устройств */
+@media only screen and (max-width: 360px) {
+    /* Уменьшаем размер шрифта для элементов */
+    header {
+        height: 100px; /* Уменьшаем высоту хедера */
+    }
+    header a {
+        margin: 30px; /* Уменьшаем отступы ссылок */
+        font-size: 40px; /* Уменьшаем размер ссылок */
+    }
+    footer {
+        height: 100px; /* Уменьшаем высоту футера */
+    }
+    footer a {
+        margin: 30px; /* Уменьшаем отступы ссылок */
+        font-size: 40px; /* Уменьшаем размер ссылок */
+    }
+    .div1 {
+        font-size: 30px; /* Уменьшаем размер шрифта */
+    }
+    
+    /* Стили для GM1 */
+    .GM1 {
+        font-size: 15px; /* Уменьшаем размер шрифта */
+    }
+    
+    /* Стили для GM2 */
+    .GM2 {
+        font-size: 15px; /* Уменьшаем размер шрифта */
+        bottom: -500px; /* Поднимаем div немного выше, чтобы избежать перекрытия */
+    }
+    
+    /* Стили для статей */
+    #article,
+    #article1,
+    #article2 {
+        flex-direction: column; /* Меняем направление flexbox на вертикальное */
+        align-items: center; /* Центрируем по горизонтали */
+        gap: 20px; /* Уменьшаем промежуток между элементами */
+        padding-left: 10px; /* Уменьшаем отступ слева */
+        padding-right: 10px; /* Уменьшаем отступ справа */
+    }
+    
+    /* Стили для заголовков */
+    h1,
+    h2 {
+        font-size: 25px; /* Уменьшаем размер шрифта заголовков */
+    }
+    
+    /* Стили для текстовых блоков */
+    p,
+    pre {
+        font-size: 12px; /* Уменьшаем размер шрифта текста */
+    }
+    #article > img {
+        width: 320px;
+    }
+}
+.progress-container {
+    position: fixed; /* Делаем прогресс-бар фиксированным */
+    top: 0; /* Размещаем его в верхней части страницы */
+    left: 0; /* Выравниваем его слева */
+    width: 100%;
+    background-color: #f1f1f1;
+    z-index: 999; /* Устанавливаем высокий индекс, чтобы прогресс-бар был поверх других элементов */
+}
+
+.progress-bar {
+    height: 10px; /* Уменьшаем высоту прогресс-бара для эстетики */
+    background: linear-gradient(to right, #ff8a00, #9dff00, #00f7ff, #0037ff, #5100ff, #c800ff, #ff00ee, #ff0000);
+}
+.DRZ{
+    display: flex;
+}
+.bx-wrapper {
+    width: 775px;
+}
+.slider-nav > div {
+    float: left;
+    border: 3px solid #fff;
+}
+
+.slider-nav > div a {
+    display: block;
+    cursor: pointer;
+}
+
+.slider-nav > div a.active {
+    border-bottom: 3px solid #000;
+}
+.slider img{
+    width: 775px;
+    height: 390px;
+}
+.slider-nav img{
+    width: 100px;
+    height: 100px;
+}
+.PUSTOTA{
+    width: 150px;
+    height: 150px;
+}
+h2{
+    color: #0037ff;
 }
