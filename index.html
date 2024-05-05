@@ -4,28 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <title>Rafiq's Final JS project</title>
 </head>
 <body>
     <header>
         <nav>
-            <a href="#article1">о товаре</a>
-            <a href="#article2">о ценах</a>
-            <a href="#article3">контакты</a>
+            <a href="#article1">O товаре и О ценах</a>
+            <a href="#article2">контакты</a>
             <a href="#article">о себе</a>
         </nav>
     </header>
-    <article id="article">
-        <img src="images/26-260288_super-mario-bros-cartoon-characters-vector-mario-and.png">
-        <div class="div1">
-            <h1>О себе</h1>
-            <p>Всем привет! Благодарю вас за посещение моего сайта.Меня зовут Рафиг Ганизаде, я занимаюсь программированием с 7-ми лет.Я прошел такие языки программирования как Scratch,Python,Веб-программирование и сейчас прохожу Java Script.Я могу делать и сайты, и продажу товаров </p>
-        </div>
-    </article>
     <!-- Hidden registration form -->
     <div id="registrationFormOverlay" class="overlay">
         <div class="popup">
-            <span class="close" onclick="closeForm()">×</span>
+            <span class="close" onclick="closeForm()"></span>
             <h2>Регистрация</h2>
             <form id="registrationForm">
                 <label for="firstName">Имя:</label>
@@ -44,33 +37,83 @@
             </form>
         </div>
     </div>
-    <article id="article1"></article>
-    <h1>O товаре и О ценах</h1>
-            <div>
-                <h1>1 GRANIT</h1>
-                <img class="G1" src="images/GRANITE1.png">
-                <pre id="g1"> 
-        Grey GRANITE Colombo Jueprana Top Tile, FLOORING, Size: Small
-        ₹ 21/ FEET</pre></div>
-            <div>
-                <h1>2 GRANIT</h1>
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+    <main>
+        <article id="article">
+            <img src="images/26-260288_super-mario-bros-cartoon-characters-vector-mario-and.png">
+            <div class="div1">
+                <h1>О себе</h1>
+                <p>Всем привет! Благодарю вас за посещение моего сайта.Меня зовут Рафиг Ганизаде, я занимаюсь программированием с 7-ми лет.Я прошел такие языки программирования как Scratch,Python,Веб-программирование и сейчас прохожу Java Script.Я могу делать и сайты, и продажу товаров </p>
+            </div>
+        </article>
+        <article id="article1">
+        <h2>O товаре и О ценах</h2>
+        <div class="DRZ">
+            <div class="GM2">
                 <img class="G2" src="images/GRANITE2.png">
+                <h1>2 GRANIT</h1>
                 <pre id="g2">
         White Grey Tiles, Size: 60x90 cm
-        ₹ 60/ Sq ft</pre></div>
-            <div>
-                <h1>1 MARBLE</h1>
-                <img class="M1" src="images/MARBLE1.png">
-                <pre id="m1">
-        Floor Marble Tiles, Thickness: 20 mm
-        ₹ 45/ sq ft</pre></div>
-            <div>
-                <h1>2 MARBLE</h1>
-                <img class="M2" src="images/MARBLE2.png">
+        ₹ 60/ Sq ft</pre>
+        <img class="M2" src="images/MARBLE2.png">
+        <h1>2 MARBLE</h1>
                 <pre id="m2">
         Indian Marble Jura Gold Tiles for Flooring
-        ₹ 23/ Square Feet</pre></div>
+        ₹ 23/ Square Feet</pre>
+        </div>
+            <div class="GM1">
+            <img class="G1" src="images/GRANITE1.png">
+            <h1>1 GRANIT</h1>
+            <pre id="g1"> 
+    Grey GRANITE Colombo Jueprana Top Tile, FLOORING, Size: Small
+    ₹ 21/ FEET</pre>
+            <img class="M1" src="images/MARBLE1.png">
+            <h1>1 MARBLE</h1>
+            <pre id="m1">
+        Floor Marble Tiles, Thickness: 20 mm
+        ₹ 45/ sq ft</pre>
+        </div>
+    </div>
     </article>
+    <article id="article2">
+        <h2>Контакты и прочее</h2>
+        <p>Спонсор этого сайта — Kodland School.</p>
+        <p>еще один хороший сайт по продаже камней:</p> <pre>https://www.indiamart.com/</pre>
+        <p>номер чтобы связаться:+994 999 9999</p>
+    </article>
+    </main>
+    <div class="PUSTOTA"></div>
+    <h2>Ещё пару примеров товара</h2>
+    <div class="slider">
+        <div><img src="Картинки/Screenshot 2024-05-05 152331.png"></div>
+        <div><img src="Картинки/Screenshot 2024-05-05 152346.png"></div>
+        <div><img src="Картинки/Screenshot 2024-05-05 152357.png"></div>
+        <div><img src="Картинки/Screenshot 2024-05-05 152411.png"></div>
+        <div><img src="Картинки/Screenshot 2024-05-05 152417.png"></div>
+        <div><img src="Картинки/Screenshot 2024-05-05 152429.png"></div>
+        <div><img src="Картинки/Screenshot 2024-05-05 152312.png"></div>
+    </div>
+    <div class="slider-nav">
+       <div><a class="active" data-slide-index="0"><img src="Картинки/Screenshot 2024-05-05 152331.png"></a></div>
+       <div><a class="active" data-slide-index="1"><img src="Картинки/Screenshot 2024-05-05 152346.png"></a></div>
+       <div><a class="active" data-slide-index="2"><img src="Картинки/Screenshot 2024-05-05 152357.png"></a></div>
+       <div><a class="active" data-slide-index="3"><img src="Картинки/Screenshot 2024-05-05 152411.png"></a></div>
+       <div><a class="active" data-slide-index="4"><img src="Картинки/Screenshot 2024-05-05 152417.png"></a></div>
+       <div><a class="active" data-slide-index="5"><img src="Картинки/Screenshot 2024-05-05 152429.png"></a></div>
+       <div><a class="active" data-slide-index="6"><img src="Картинки/Screenshot 2024-05-05 152312.png"></a></div>
+    </div>
+    <div class="PUSTOTA"></div>
+    <footer>
+        <nav>
+            <a href="#article1">O товаре и О ценах</a>
+            <a href="#article2">Kонтакты</a>
+            <a href="#article">O себе</a>
+        </nav>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
